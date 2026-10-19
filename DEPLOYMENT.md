@@ -74,12 +74,13 @@ ENCRYPTION_KEY = "your-long-random-encryption-key-at-least-48-characters"
 
 1. 打开 **Workers & Pages → D1 SQL Database**
 2. 进入 `tmarks-prod-db` → **Console**
-3. 打开仓库中的以下 SQL 文件：
+3. 按顺序打开并执行仓库中的 SQL 文件（复制文件内容，不是文件路径）：
    - `tmarks/migrations/0001_d1_console.sql`
    - `tmarks/migrations/0002_d1_console_ai_settings.sql`
-   - `tmarks/migrations/0100_d1_console.sql`
-   - `tmarks/migrations/0101_d1_console.sql`
-4. 复制全部 SQL，粘贴到控制台，点击 **Execute** 执行
+   - `tmarks/migrations/0103_api_key_rate_limits.sql`
+   - `tmarks/migrations/0104_rate_limits.sql`
+   - `tmarks/migrations/0105_bookmark_pin_order.sql`
+4. 每个文件分别复制 SQL 内容，粘贴到控制台并点击 **Execute**，确认成功后再执行下一个
 
 ### 6. 重新部署
 
