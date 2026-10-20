@@ -3,15 +3,15 @@
     "title": "TMarks Browser Extension",
     "subtitle": "Save tab groups with one click for efficient bookmark management",
     "download": {
-      "title": "Download Chrome / Chromium Version",
-      "button": "Download"
+      "title": "Build the Extension from Source",
+      "button": "View Source and Build Guide"
     },
     "browsers": {
       "title": "Supported Browsers",
       "speedMode": "Speed Mode"
     },
-    "version": "Version: {{version}} | Size: ~{{size}} | Updated: {{date}}",
-    "tip": "💡 Only the Chrome/Chromium universal package is provided (works on Chromium-based browsers like Chrome, Edge, Brave, Opera)",
+    "version": "Source version: {{version}} | {{size}} | {{date}}",
+    "tip": "💡 Build tab/ locally and load tab/dist. The old package without matching source is no longer offered.",
     "features": {
       "title": "✨ Key Features",
       "saveTabGroups": {
@@ -30,28 +30,28 @@
     "install": {
       "title": "📦 Installation Steps",
       "step1": {
-        "title": "Download Extension Package",
-        "description": "Click the download button above to get the tmarks-extension-chrome.zip file"
+        "title": "Get the Source",
+        "description": "Get the tab/ extension source from your GitHub fork."
       },
       "step2": {
-        "title": "Extract Files",
-        "description": "Extract the downloaded zip file to any folder (preferably a permanent location)"
+        "title": "Install Dependencies",
+        "description": "In tab/, run corepack pnpm install --frozen-lockfile."
       },
       "step3": {
-        "title": "Open Extension Management Page",
-        "description": "Enter in browser address bar:"
+        "title": "Build from Source",
+        "description": "In tab/, run corepack pnpm build:only to generate tab/dist."
       },
       "step4": {
-        "title": "Enable Developer Mode",
-        "description": "Toggle on 'Developer mode' in the top right corner of the extension management page"
+        "title": "Open Extension Management",
+        "description": "Enter the following address in your browser:"
       },
       "step5": {
-        "title": "Load Extension",
-        "description": "Click 'Load unpacked' and select the extracted folder"
+        "title": "Enable Developer Mode",
+        "description": "Turn on Developer mode in the extension management page."
       },
       "step6": {
-        "title": "Installation Complete",
-        "description": "The extension icon will appear in the browser toolbar, click to use"
+        "title": "Load the Local Build",
+        "description": "Click 'Load unpacked' and choose tab/dist (containing manifest.json)."
       }
     },
     "tips": {

@@ -364,17 +364,17 @@
   "browser": {
     "title": "浏览器设置",
     "download": {
-      "title": "浏览器插件下载",
-      "description": "下载 Chrome/Chromium 通用扩展（适用于 Chromium 内核浏览器）",
-      "clickToDownload": "点击下载",
-      "tip": "💡 目前仅提供 Chrome/Chromium 通用版本（Chrome、Edge、Brave、Opera、360、QQ、搜狗等）"
+      "title": "扩展源码与安装",
+      "description": "从自己的 Fork 中构建可维护的 Chrome 扩展，不再下载无对应源码的旧包",
+      "clickToDownload": "查看扩展源码",
+      "tip": "💡 运行 tab/ 中的构建命令，再加载 tab/dist；Chrome 原生书签仅支持手动单向导入到 TMarks。"
     },
     "permissions": {
       "title": "浏览器权限设置",
       "description": "配置 TMarks 所需的浏览器权限，以获得最佳使用体验",
       "bookmarks": {
         "title": "书签访问权限",
-        "description": "允许扩展读取和保存浏览器书签"
+        "description": "允许扩展读取选定的 Chrome 书签文件夹；导入过程不会写入浏览器书签"
       },
       "tabs": {
         "title": "标签页访问权限",
@@ -405,18 +405,18 @@
     "install": {
       "title": "安装步骤",
       "description": "按照以下步骤安装浏览器扩展",
-      "step1Title": "下载插件压缩包",
-      "step1Desc": "点击上方下载按钮，获取对应浏览器的扩展文件",
-      "step2Title": "解压文件",
-      "step2Desc": "将下载的 zip 文件解压到任意文件夹（建议放在不会删除的位置）",
-      "step3Title": "打开扩展管理页面",
-      "step3Desc": "Chrome: chrome://extensions/ | Edge: edge://extensions/",
-      "step4Title": "启用开发者模式",
-      "step4Desc": "在扩展管理页面右上角，打开\"开发者模式\"开关",
-      "step5Title": "加载插件",
-      "step5Desc": "点击\"加载已解压的扩展程序\"，选择刚才解压的文件夹",
-      "step6Title": "完成安装",
-      "step6Desc": "插件图标会出现在浏览器工具栏，点击即可使用"
+      "step1Title": "获取扩展源码",
+      "step1Desc": "从你的 GitHub Fork 获取 tab/ 目录",
+      "step2Title": "安装依赖",
+      "step2Desc": "在 tab/ 目录执行 corepack pnpm install --frozen-lockfile",
+      "step3Title": "从源码构建",
+      "step3Desc": "在 tab/ 目录执行 corepack pnpm build:only",
+      "step4Title": "打开扩展管理页面",
+      "step4Desc": "Chrome: chrome://extensions/ | Edge: edge://extensions/",
+      "step5Title": "启用开发者模式",
+      "step5Desc": "在扩展管理页面打开\"开发者模式\"开关",
+      "step6Title": "加载本地构建",
+      "step6Desc": "点击\"加载已解压的扩展程序\"，选择 tab/dist 文件夹"
     },
     "faq": {
       "title": "常见问题",

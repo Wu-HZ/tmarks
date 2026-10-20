@@ -8,7 +8,7 @@
 [![React](https://img.shields.io/badge/React-18.3%20%7C%2019-61dafb.svg)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-6.0%20%7C%207-646cff.svg)](https://vitejs.dev/)
 [![Cloudflare](https://img.shields.io/badge/Cloudflare-Workers-f38020.svg)](https://workers.cloudflare.com/)
-[![许可证](https://img.shields.io/badge/许可证-MIT-green.svg)](LICENSE)
+[![许可证](https://img.shields.io/badge/许可证-CC_BY--NC_4.0-yellow.svg)](LICENSE)
 
 简体中文
 
@@ -42,12 +42,13 @@ TMarks 是一个现代化的智能书签管理系统，结合 AI 技术自动生
 
 ## 🔌 浏览器扩展
 
-登录 TMarks 后，进入 **个人设置** 页面下载并安装浏览器扩展。
+扩展开发源码位于 [`tab/`](tab/)（该目录保留上游 MIT 许可证），可本地构建和维护。网站不再提供与仓库源码不对应的旧版扩展 ZIP。安装与 Chrome 原生书签单向导入步骤见 [`tab/README.md`](tab/README.md)。
 
 ### 扩展功能
 
 - **快速保存书签** - 一键保存当前网页，AI 自动推荐标签
 - **标签页收纳** - 一键收纳所有标签页，改天再看
+- **Chrome 原生书签导入** - 手动选择文件夹，预览并单向复制到 TMarks；不修改浏览器书签
 
 ### 支持浏览器
 
@@ -66,4 +67,4 @@ Chrome / Edge / Opera / Brave / 360 / QQ / 搜狗
 
 ## 📄 许可证
 
-本项目采用 [MIT License](LICENSE) 开源协议。
+网站项目根目录的 [`LICENSE`](LICENSE) 为 **CC BY-NC 4.0（非商业用途）**；从上游分支引入的扩展 `tab/` 保留其 [`MIT 许可证`](tab/LICENSE)。请分别按对应目录的许可证使用。

@@ -390,17 +390,17 @@
   "browser": {
     "title": "Browser Settings",
     "download": {
-      "title": "Browser Extension Download",
-      "description": "Download the Chrome/Chromium universal extension (for Chromium-based browsers)",
-      "clickToDownload": "Click to download",
-      "tip": "💡 Only the Chrome/Chromium universal package is provided (Chrome, Edge, Brave, Opera, 360, QQ, Sogou, etc.)"
+      "title": "Extension Source and Installation",
+      "description": "Build the maintainable Chrome extension from your own fork; the unmaintainable old package is no longer offered",
+      "clickToDownload": "View extension source",
+      "tip": "💡 Build tab/ and load tab/dist. Native Chrome bookmarks are imported manually in one direction only."
     },
     "permissions": {
       "title": "Browser Permissions",
       "description": "Configure browser permissions required by TMarks for the best experience",
       "bookmarks": {
         "title": "Bookmark Access Permission",
-        "description": "Allow extension to read and save browser bookmarks"
+        "description": "Allow the extension to read a selected Chrome folder; importing never modifies native bookmarks"
       },
       "tabs": {
         "title": "Tab Access Permission",
@@ -431,18 +431,18 @@
     "install": {
       "title": "Installation Steps",
       "description": "Follow these steps to install the browser extension",
-      "step1Title": "Download extension package",
-      "step1Desc": "Click the download button above to get the extension file for your browser",
-      "step2Title": "Extract files",
-      "step2Desc": "Extract the downloaded zip file to any folder (preferably a permanent location)",
-      "step3Title": "Open extension management page",
-      "step3Desc": "Chrome: chrome://extensions/ | Edge: edge://extensions/",
-      "step4Title": "Enable developer mode",
-      "step4Desc": "In the extension management page, turn on \"Developer mode\" switch in the top right",
-      "step5Title": "Load extension",
-      "step5Desc": "Click \"Load unpacked\" and select the extracted folder",
-      "step6Title": "Installation complete",
-      "step6Desc": "Extension icon will appear in browser toolbar, click to use"
+      "step1Title": "Get the source",
+      "step1Desc": "Check out tab/ from your GitHub fork",
+      "step2Title": "Install dependencies",
+      "step2Desc": "In tab/, run corepack pnpm install --frozen-lockfile",
+      "step3Title": "Build from source",
+      "step3Desc": "In tab/, run corepack pnpm build:only",
+      "step4Title": "Open extension management",
+      "step4Desc": "Chrome: chrome://extensions/ | Edge: edge://extensions/",
+      "step5Title": "Enable developer mode",
+      "step5Desc": "Turn on Developer mode in the extension management page",
+      "step6Title": "Load local build",
+      "step6Desc": "Click Load unpacked and choose tab/dist"
     },
     "faq": {
       "title": "FAQ",

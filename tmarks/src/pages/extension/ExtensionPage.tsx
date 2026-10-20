@@ -1,20 +1,11 @@
 import { useTranslation } from 'react-i18next'
-import { Download, Chrome, CheckCircle, AlertCircle } from 'lucide-react'
+import { ExternalLink, Chrome, CheckCircle, AlertCircle } from 'lucide-react'
 
-const EXTENSION_ZIP = 'tmarks-extension-chrome.zip'
+const EXTENSION_SOURCE = 'https://github.com/Wu-HZ/tmarks/tree/main/tab'
 const CHROMIUM_BROWSERS = ['Chrome', 'Edge', 'Brave', 'Opera', '360', 'QQ', 'Sogou']
 
 export function ExtensionPage() {
   const { t } = useTranslation('info')
-
-  const handleDownload = () => {
-    const link = document.createElement('a')
-    link.href = `/extensions/${EXTENSION_ZIP}`
-    link.download = EXTENSION_ZIP
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-  }
 
   const featureKeys = ['saveTabGroups', 'restoreTabs', 'autoSync'] as const
   const installSteps = [1, 2, 3, 4, 5, 6] as const
@@ -48,13 +39,13 @@ export function ExtensionPage() {
           <p className="text-xs mb-3" style={{ color: 'var(--muted-foreground)' }}>
             {CHROMIUM_BROWSERS.join(' / ')}
           </p>
-          <button
-            onClick={handleDownload}
-            className="w-full inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-semibold shadow-sm hover:shadow-md transition-all hover:scale-[1.01] active:scale-[0.99]"
+          <a
+            href={EXTENSION_SOURCE} target="_blank" rel="noopener noreferrer"
+            className="w-full inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-semibold shadow-sm hover:shadow-md"
           >
-            <Download className="w-4 h-4" />
+            <ExternalLink className="w-4 h-4" />
             {t('extension.download.button')}
-          </button>
+          </a>
         </div>
       </div>
 
@@ -78,7 +69,7 @@ export function ExtensionPage() {
 
         <div className="mt-4 p-4 rounded-xl bg-primary/5 border border-primary/10 text-center">
           <p className="text-sm" style={{ color: 'var(--muted-foreground)' }}>
-            {t('extension.version', { version: '1.0.4', size: '428 KB', date: '2026-02-06' })}
+            {t('extension.version', { version: '1.0.1', size: '源码构建', date: '以 GitHub 提交为准' })}
           </p>
           <p className="text-sm mt-2" style={{ color: 'var(--muted-foreground)' }}>
             {t('extension.tip')}
@@ -130,7 +121,7 @@ export function ExtensionPage() {
                 <p className="text-sm" style={{ color: 'var(--muted-foreground)' }}>
                   {t(`extension.install.step${step}.description`)}
                 </p>
-                {step === 3 && (
+                {step === 4 && (
                   <div className="mt-2 p-3 bg-muted/30 rounded-lg border border-border text-sm">
                     <p className="mb-1">Chrome: chrome://extensions/</p>
                     <p>Edge: edge://extensions/</p>

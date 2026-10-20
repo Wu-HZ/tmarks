@@ -3,15 +3,15 @@
     "title": "TMarks 浏览器插件",
     "subtitle": "一键保存标签页组，让书签管理更高效",
     "download": {
-      "title": "下载 Chrome / Chromium 版本",
-      "button": "下载"
+      "title": "获取可维护的扩展源码",
+      "button": "查看源码与构建说明"
     },
     "browsers": {
       "title": "支持的浏览器",
       "speedMode": "极速模式"
     },
-    "version": "版本：{{version}} | 大小：约 {{size}} | 更新时间：{{date}}",
-    "tip": "💡 目前仅提供 Chrome/Chromium 通用版本（适用于 Chrome、Edge、Brave、Opera 等 Chromium 内核浏览器）",
+    "version": "源码版本：{{version}} | {{size}} | {{date}}",
+    "tip": "💡 由 tab/ 原始源码本地构建，加载 tab/dist；不再提供没有对应源码的旧版 ZIP。",
     "features": {
       "title": "✨ 主要功能",
       "saveTabGroups": {
@@ -30,28 +30,28 @@
     "install": {
       "title": "📦 安装步骤",
       "step1": {
-        "title": "下载插件压缩包",
-        "description": "点击上方下载按钮，获取 tmarks-extension-chrome.zip 文件"
+        "title": "获取源码",
+        "description": "从你的 GitHub Fork 获取 tab/ 扩展源码（与网站一同存储在仓库中）。"
       },
       "step2": {
-        "title": "解压文件",
-        "description": "将下载的 zip 文件解压到任意文件夹（建议放在不会删除的位置）"
+        "title": "安装依赖",
+        "description": "进入 tab/ 目录执行 corepack pnpm install --frozen-lockfile。"
       },
       "step3": {
-        "title": "打开扩展管理页面",
-        "description": "在浏览器地址栏输入："
+        "title": "从源码构建",
+        "description": "在 tab/ 目录执行 corepack pnpm build:only，生成 tab/dist。"
       },
       "step4": {
-        "title": "启用开发者模式",
-        "description": "在扩展管理页面右上角，打开「开发者模式」开关"
+        "title": "打开扩展管理页面",
+        "description": "在浏览器地址栏输入以下地址："
       },
       "step5": {
-        "title": "加载插件",
-        "description": "点击「加载已解压的扩展程序」，选择刚才解压的文件夹"
+        "title": "启用开发者模式",
+        "description": "在扩展管理页面打开「开发者模式」开关。"
       },
       "step6": {
-        "title": "完成安装",
-        "description": "插件图标会出现在浏览器工具栏，点击即可使用"
+        "title": "加载本地构建",
+        "description": "点击「加载已解压的扩展程序」，选择 tab/dist（其中有 manifest.json）。"
       }
     },
     "tips": {
